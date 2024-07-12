@@ -36,6 +36,7 @@
   --border-white: hsl(0, 0%, 100%);
   --border-white-alpha-15: #ffffff2c;
   --border-white-alpha-16: #242627;
+  --border-white-alpha-17: #303233;
 
   /** Default colors */
   --white: hsl(0, 0%, 100%, 1);
