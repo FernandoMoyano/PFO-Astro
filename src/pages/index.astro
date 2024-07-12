@@ -1,0 +1,27 @@
+---
+import NavBar from "../components/NavBar/NavBar.astro"
+import Hero from "../components/Hero/Hero.astro"
+import Card from "../components/Card/Card.astro"
+import Posts from "../components/Posts/Posts.astro"
+
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+	  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+		<title>Astro</title>
+	</head>
+	<body>
+		<NavBar/>
+		<div>
+			<Hero/>
+			<Card/>
+			<Posts/>
+		</div>
+	</body>
+</html>
