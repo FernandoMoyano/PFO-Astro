@@ -4,7 +4,7 @@
   --bg-carolina-blue: hsl(199, 89%, 49%);
   --bg-prussian-blue: hsla(216, 33%, 20%, 1);
   --bg-oxford-blue: hsla(222, 44%, 13%, 1);
-  --bg-oxford-blue-2: #0f1729;
+  --bg-oxford-blue-2: hsl(222, 46%, 11%);
   --bg-oxford-blue-3: hsl(220, 51%, 8%);
   --bg-oxford-blue-3: #17181c;
 
@@ -46,7 +46,7 @@
   =                   container                 =
   =============================================*/
 
-  --width-380: 380px;
+  --width-380: 360px;
   --width-575: 540px;
   --width-768: 720px;
   --width-992: 930px;
