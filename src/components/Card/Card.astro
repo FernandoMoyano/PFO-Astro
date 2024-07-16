@@ -8,7 +8,7 @@ import "../../css/variables.module.css";
     <h2>Recursos</h2>
   </div>
 
-  <article class='tour ''>
+  <article class='tour' '>
     <div>
       <i class='ri-file-code-line ri-2x'></i>
     </div>
@@ -23,7 +23,7 @@ import "../../css/variables.module.css";
     </div>
   </article>
 
-  <article class='tour '>
+  <article class='tour'>
     <div>
       <i class='ri-vidicon-line ri-2x'></i>
     </div>
@@ -38,7 +38,7 @@ import "../../css/variables.module.css";
     </div>
   </article>
 
-  <article class='tour '>
+  <article class='tour'>
     <div>
       <i class='ri-medal-2-fill ri-2x'></i>
     </div>
@@ -67,7 +67,6 @@ import "../../css/variables.module.css";
   .cards__title h2 {
     background-image: var(--gradient-1);
     display: inline-block;
- /*    background-position: top 400px; */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-size: var(--fontSize-2);
@@ -114,51 +113,13 @@ import "../../css/variables.module.css";
     line-height: var(--lineHeight-2);
   }
 
-    /* Estilos para el timeline */
-.timeline {
-  position: relative;
-  padding-left: 40px;
-}
-
-.timeline__title-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.timeline__point {
-  width: 20px;
-  height: 20px;
- background-image: var(--gradient-1);
-  border-radius: 50%;
-  position: absolute;
-  top: 20px;
-  left: -70px; /* Ajusta según sea necesario */
-}
-
-.timeline__item {
-  position: relative;
-  padding-left: 40px;
-  
-}
-
-.timeline__item::before {
-  content: '';
-  position: absolute;
-  left: -20px; /* Ajusta según sea necesario */
-  top: 40px; /* Ajusta según sea necesario */
-  width: 2px;
-  height: 100%; /* Ajusta según sea necesario */
-  background-image:var(--gradient-1);
-  z-index: -1;
-}
-
-/* Asegúrate de ajustar estos valores según sea necesario para alinear correctamente los elementos */
-
 
   @media screen and (min-width: 575px) {
     .container {
       max-width: var(--width-575);
+    }
+    .timeline {
+      position: relative;
     }
   }
 
@@ -174,6 +135,43 @@ import "../../css/variables.module.css";
       grid-column: span 2;
       font-size: var(--fontSize-2);
     }
+
+      /* Estilos para el timeline */
+  .timeline {
+    position: relative;
+  }
+
+  .timeline__title-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .timeline__point {
+    width: 15px;
+    height: 15px;
+    background-color: var(--bg-prussian-blue);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: -67px; /* Ajusta según sea necesario */
+  }
+
+  .timeline__item {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline__item::before {
+    content: "";
+    position: absolute;
+    left: -20px; /* Ajusta según sea necesario */
+    top: 50px; /* Ajusta según sea necesario */
+    width: 1px;
+    height: 100%; /* Ajusta según sea necesario */
+    background-color: var(--bg-prussian-blue);
+    z-index: -1;
+  }
   }
 
   @media screen and (min-width: 1200px) {
