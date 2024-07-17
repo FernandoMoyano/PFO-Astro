@@ -13,7 +13,7 @@ import "../../css/variables.module.css";
       <div class='post__imageContainer'>
         <img
           class='post__image'
-          src='https://images.pexels.com/photos/7303126/pexels-photo-7303126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='https://cdn.pixabay.com/photo/2024/02/17/15/14/crows-8579540_1280.jpg'
         />
       </div>
       <h4 class='post__title'>Javascript Array-1</h4>
@@ -33,7 +33,7 @@ import "../../css/variables.module.css";
       <div class='post__imageContainer'>
         <img
           class='post__image'
-          src='https://images.pexels.com/photos/7303126/pexels-photo-7303126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='https://cdn.pixabay.com/photo/2023/03/08/15/23/lake-7838004_640.jpg'
         />
       </div>
       <h4 class='post__title'>Javascript Array-2</h4>
@@ -53,7 +53,7 @@ import "../../css/variables.module.css";
       <div class='post__imageContainer'>
         <img
           class='post__image'
-          src='https://images.pexels.com/photos/7303126/pexels-photo-7303126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='https://cdn.pixabay.com/photo/2024/06/30/13/41/iguana-8863156_640.jpg'
         />
       </div>
       <h4 class='post__title'>Javascript Array-3</h4>
@@ -73,7 +73,7 @@ import "../../css/variables.module.css";
       <div class='post__imageContainer'>
         <img
           class='post__image'
-          src='https://images.pexels.com/photos/7303126/pexels-photo-7303126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='https://cdn.pixabay.com/photo/2024/03/28/15/59/life-8661191_640.jpg'
         />
       </div>
       <h4 class='post__title'>Javascript Array-4</h4>
@@ -96,7 +96,7 @@ import "../../css/variables.module.css";
       <div class='post__imageContainer'>
         <img
           class='post__image'
-          src='https://images.pexels.com/photos/7303126/pexels-photo-7303126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='https://cdn.pixabay.com/photo/2023/03/17/14/45/rainwater-7858773_640.jpg'
         />
       </div>
       <h4 class='post__title'>Javascript Array-5</h4>
@@ -119,7 +119,7 @@ import "../../css/variables.module.css";
       <div class='post__imageContainer'>
         <img
           class='post__image'
-          src='https://images.pexels.com/photos/7303126/pexels-photo-7303126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='https://cdn.pixabay.com/photo/2023/12/15/22/38/trees-8451483_1280.jpg'
         />
       </div>
       <h4 class='post__title'>Javascript Array-6</h4>
@@ -129,9 +129,7 @@ import "../../css/variables.module.css";
         <a class='post__tag'>Javascript</a>
       </div>
       <div class='post__description'>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
   </article>
@@ -141,7 +139,7 @@ import "../../css/variables.module.css";
       <div class='post__imageContainer'>
         <img
           class='post__image'
-          src='https://images.pexels.com/photos/7303126/pexels-photo-7303126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src='https://cdn.pixabay.com/photo/2024/03/04/14/30/plant-8612513_640.jpg'
         />
       </div>
       <h4 class='post__title'>Javascript Array-7</h4>
@@ -151,9 +149,7 @@ import "../../css/variables.module.css";
         <a class='post__tag'>Javascript</a>
       </div>
       <div class='post__description'>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
   </article>
@@ -174,8 +170,8 @@ import "../../css/variables.module.css";
 
   .container {
     max-width: var(--width-380);
-    /*    border: 1px solid gray; */
     margin: var(--section-padding) auto;
+    /*    border: 1px solid gray; */
   }
 
   .post {
@@ -197,7 +193,7 @@ import "../../css/variables.module.css";
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-size: var(--fontSize-3);
-    margin-bottom: var(--section-padding);
+    margin: var(--section-padding) auto;
   }
 
   .post__article {
@@ -211,7 +207,7 @@ import "../../css/variables.module.css";
   .post__imageContainer {
     width: 100%;
     height: 200px;
-    overflow: hidden; 
+    overflow: hidden;
     border-radius: var(--radius-8);
   }
 
@@ -227,7 +223,7 @@ import "../../css/variables.module.css";
   }
 
   .post__imageContainer:hover .post__image {
-    transform: scale(1.1); 
+    transform: scale(1.1);
   }
 
   .post__title {
@@ -276,8 +272,6 @@ import "../../css/variables.module.css";
     color: var(--text-white);
   }
 
- 
-
   /* Tablet 1 =================================> */
 
   @media screen and (min-width: 575px) {
@@ -316,45 +310,6 @@ import "../../css/variables.module.css";
       align-items: center;
       grid-column: span 2;
     }
-
-     /* Estilos para el timeline */
-  .timeline {
-    position: relative;
-  }
-
-  .timeline__title-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .timeline__point {
-    width: 15px;
-    height: 15px;
-    background-color: var(--bg-prussian-blue);
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    left: -67px; /* Ajusta según sea necesario */
-  }
-
-  .timeline__item {
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 20px;
-  }
-
-  .timeline__item::before {
-    content: "";
-    position: absolute;
-    left: -20px; /* Ajusta según sea necesario */
-    top: -30px; /* Ajusta según sea necesario */
-    width: 1.5px;
-    height: 100%; /* Ajusta según sea necesario */
-    background-color: var(--bg-prussian-blue);
-    z-index: -1;
-  }
-
   }
 
   /* Desktop ==================================> */
@@ -413,5 +368,43 @@ import "../../css/variables.module.css";
       grid-column: 3 / 4;
       grid-row: 4 / 5;
     }
+
+    /* Estilos para el timeline */
+  /*   .timeline {
+      position: relative;
+    }
+
+    .timeline__title-wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .timeline__point {
+      width: 15px;
+      height: 15px;
+      background-color: var(--bg-prussian-blue);
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: -66px;
+    }
+
+    .timeline__item {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+
+    .timeline__item::before {
+      content: "";
+      position: absolute;
+      left: -20px; 
+      top: -30px; 
+      width: 1.5px;
+      height: 100%; 
+      background-color: var(--bg-prussian-blue);
+      z-index: -1;
+    } */
   }
 </style>

@@ -18,7 +18,7 @@ import "../../css/variables.module.css";
         <h4>Código</h4>
       </div>
       <p class='tour__description'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum placeat
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
       </p>
     </div>
   </article>
@@ -33,7 +33,7 @@ import "../../css/variables.module.css";
         <h4>Videos</h4>
       </div>
       <p class='tour__description'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsum
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
       </p>
     </div>
   </article>
@@ -87,7 +87,6 @@ import "../../css/variables.module.css";
     border: 1px solid var(--bg-prussian-blue);
     border-radius: var(--radius-8);
     background-color: var(--bg-oxford-blue);
-    /*   color: var(--gradient-5); */
     padding: 1rem;
     gap: 20px;
     cursor: pointer;
@@ -135,8 +134,23 @@ import "../../css/variables.module.css";
       grid-column: span 2;
       font-size: var(--fontSize-2);
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: var(--width-1200);
+    }
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+    }
+    .cards__title {
+      grid-column: span 3;
+      display: inline-block;
+    }
+
     /* Estilos para el timeline */
-    .timeline {
+    /* .timeline {
       position: relative;
     }
 
@@ -153,7 +167,7 @@ import "../../css/variables.module.css";
       border-radius: 50%;
       position: absolute;
       top: 25px;
-      left: -67px; /* Ajusta según sea necesario */
+      left: -66px; 
     }
 
     .timeline__item {
@@ -164,26 +178,12 @@ import "../../css/variables.module.css";
     .timeline__item::before {
       content: "";
       position: absolute;
-      left: -20px; /* Ajusta según sea necesario */
-      top: 50px; /* Ajusta según sea necesario */
+      left: -20px; 
+      top: 50px; 
       width: 1px;
-      height: 100%; /* Ajusta según sea necesario */
+      height: 100%;
       background-color: var(--bg-prussian-blue);
       z-index: -1;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    .container {
-      max-width: var(--width-1200);
-    }
-    .cards {
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: auto;
-    }
-    .cards__title {
-      grid-column: span 3;
-      display: inline-block;
-    }
+    } */
   }
 </style>

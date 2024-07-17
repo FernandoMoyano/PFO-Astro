@@ -22,15 +22,6 @@
   --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
   --gradient-3: linear-gradient(0deg, #000d1a, transparent);
 
-  /* colors Icons */
-
-  --gradient-5: #fffacf;
-  --gradient-6: #fffce5;
-  --gradient-12: #68ac9b;
-  --gradient-13: #1399ab;
-  --hover-link: #bf4080;
-  --text-main: #f76d57;
-
   /** Border colors */
   --border-wild-blue-yonder: #92a8c8;
   --border-prussian-blue: hsla(216, 33%, 20%, 1);
@@ -111,7 +102,7 @@
   =                   Spacing                   =
   =============================================*/
 
-  --section-padding: 70px;
+  --section-padding: 90px;
 
   /*=============================================
   =                   transition                =
