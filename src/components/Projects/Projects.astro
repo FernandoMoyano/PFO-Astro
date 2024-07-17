@@ -1,110 +1,25 @@
 ---
 import "../../css/variables.module.css";
+import Carrousel from "../Carrousel/Carrousel.astro";
 ---
 
-<section class='projects container'>
-  <div class='project__titleSection'>
-    <h2>Mis proyectos</h2>
+<section>
+  <div class="project__titleSection">
+    <h2 >Mis proyectos</h2>
   </div>
-  <article class='project__container'>
-    <div class='project__stack'>
-      <i class='devicon-html5-plain colored'></i>
-      <i class='devicon-css3-plain colored'></i>
-      <i class='devicon-javascript-plain colored'></i>
-    </div>
-    <div>
-      <img src='' alt='' />
-      <h4 class='project__title'>Project-1</h4>
-      <p class='project__description'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing.
-      </p>
-    </div>
-    <div class='project__links'>
-      <a href=''></a>
-      <a href=''></a>
-    </div>
-  </article>
-
-  <article class='project__container'>
-    <div class='project__stack'>
-      <i class='devicon-html5-plain colored'></i>
-      <i class='devicon-css3-plain colored'></i>
-      <i class='devicon-javascript-plain colored'></i>
-    </div>
-    <div>
-      <img src='' alt='' />
-      <h4 class='project__title'>Project-1</h4>
-      <p class='project__description'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing.
-      </p>
-    </div>
-    <div class='project__links'>
-      <a href=''></a>
-      <a href=''></a>
-    </div>
-  </article>
+  <Carrousel/>
 </section>
 
 <style>
-  .container {
-    max-width: var(--width-380);
-    margin: var(--section-padding) auto;
-    border: 1px solid gray;
+ 
+  .project__titleSection {
+    grid-column: span 2;
   }
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 10px;
-  }
-
   .project__titleSection h2 {
+    font-size: var(--fontSize-3);
     background-image: var(--gradient-2);
     display: inline-block;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    font-size: var(--fontSize-3);
-    margin: var(--section-padding) auto;
-  }
-
-  .project__container {
-    border: 1px solid var(--bg-prussian-blue);
-    border-radius: var(--radius-8);
-    padding: 10px;
-  }
-
-  .project__title {
-    font-size: var(--fontSize-9);
-    color: var(--text-columbia-blue);
-  }
-
-  .project__description {
-    font-size: var(--fontSize-9);
-    color: var(--text-wild-blue-yonder);
-    line-height: var(--lineHeight-2);
-  }
-
-  @media screen and (min-width: 575px) {
-    .container {
-      max-width: var(--width-575);
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    :root {
-      --fontSize-10: 3.2rem;
-      --fontSize-9: 1.2rem;
-      --fontSize-3: 2rem;
-    }
-
-    .container {
-      max-width: var(--width-768);
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    .container {
-      max-width: var(--width-1200);
-    }
   }
 </style>

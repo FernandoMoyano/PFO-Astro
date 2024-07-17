@@ -16,6 +16,7 @@
     "boxicons": "^2.1.4",
     "remark": "^15.0.1",
     "remark-reading-time": "^2.0.1",
+    "swiper": "^11.1.5",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
