@@ -3,6 +3,8 @@ import NavBar from "../components/NavBar/NavBar.astro"
 import Hero from "../components/Hero/Hero.astro"
 import Card from "../components/Card/Card.astro"
 import Posts from "../components/Posts/Posts.astro"
+import Projects from "../components/Projects/Projects.astro"
+
 
 
 ---
@@ -14,6 +16,7 @@ import Posts from "../components/Posts/Posts.astro"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 	  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 		<title>Astro</title>
 	</head>
 	<body>
@@ -22,6 +25,7 @@ import Posts from "../components/Posts/Posts.astro"
 			<Hero/>
 			<Card/>
 			<Posts/>
+			<Projects/>
 		</div>
 	</body>
 </html>
