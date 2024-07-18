@@ -3,23 +3,56 @@ import "../../css/variables.module.css";
 import Carrousel from "../Carrousel/Carrousel.astro";
 ---
 
-<section>
-  <div class="project__titleSection">
-    <h2 >Mis proyectos</h2>
+<section class='container'>
+  <div class='project__titleSection'>
+    <h2>Mis proyectos</h2>
   </div>
-  <Carrousel/>
+  <Carrousel />
 </section>
 
 <style>
- 
+  .container {
+    /*   border: 1px solid gray; */
+    max-width: var(--width-380);
+    margin: var(--section-padding) auto;
+    position: relative;
+    overflow: hidden;
+  }
+
   .project__titleSection {
     grid-column: span 2;
+    margin: var(--section-padding) auto;
   }
+
   .project__titleSection h2 {
     font-size: var(--fontSize-3);
     background-image: var(--gradient-2);
     display: inline-block;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+  }
+
+  @media screen and (min-width: 575px) {
+    .container {
+      max-width: var(--width-575);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    :root {
+      --fontSize-10: 3.2rem;
+      --fontSize-9: 1.2rem;
+      --fontSize-3: 2rem;
+    }
+
+    .container {
+      max-width: var(--width-768);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: var(--width-1200);
+    }
   }
 </style>
