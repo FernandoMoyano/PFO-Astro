@@ -3,7 +3,7 @@ import "../../css/variables.module.css";
 ---
 
 <div class='wrapper'>
-  <button class='prev'>Prev</button>
+  <button class='prev'>&larr;</button>
   <div class='carrousel'>
     <article class='project__container card'>
       <div class='project__image'>
@@ -90,6 +90,12 @@ import "../../css/variables.module.css";
     </article>
 
     <article class='project__container card'>
+      <div class='project__image'>
+        <img
+          src='https://cdn.pixabay.com/photo/2024/06/17/23/30/trees-8836655_640.jpg'
+          alt='project-3'
+        />
+      </div>
       <div class='project__stack'>
         <svg viewBox='0 0 128 128' width='30px' height='30px'>
           <path
@@ -114,7 +120,6 @@ import "../../css/variables.module.css";
         </svg>
       </div>
       <div>
-        <img src='' alt='' />
         <h4 class='project__title'>Project-3</h4>
         <p class='project__description'>
           Lorem, ipsum dolor sit amet consectetur adipisicing.
@@ -127,22 +132,28 @@ import "../../css/variables.module.css";
     </article>
 
     <article class='project__container card'>
+      <div class='project__image'>
+        <img
+          src='https://cdn.pixabay.com/photo/2024/06/29/06/30/forest-8860740_640.png'
+          alt='project-4s'
+        />
+      </div>
       <div class='project__stack'>
-        <svg viewBox='0 0 128 128' width='50px' height='50px'>
+        <svg viewBox='0 0 128 128' width='30px' height='30px'>
           <path
             fill='#E44D26'
             d='M9.032 2l10.005 112.093 44.896 12.401 45.02-12.387L118.968 2H9.032zm89.126 26.539l-.627 7.172L97.255 39H44.59l1.257 14h50.156l-.336 3.471-3.233 36.119-.238 2.27L64 102.609v.002l-.034.018-28.177-7.423L33.876 74h13.815l.979 10.919L63.957 89H64v-.546l15.355-3.875L80.959 67H33.261l-3.383-38.117L29.549 25h68.939l-.33 3.539z'
           ></path>
         </svg>
 
-        <svg viewBox='0 0 128 128' width='50px' height='50px'>
+        <svg viewBox='0 0 128 128' width='30px' height='30px'>
           <path
             fill='#1572B6'
             d='M8.76 1l10.055 112.883 45.118 12.58 45.244-12.626L119.24 1H8.76zm89.591 25.862l-3.347 37.605.01.203-.014.467v-.004l-2.378 26.294-.262 2.336L64 101.607v.001l-.022.019-28.311-7.888L33.75 72h13.883l.985 11.054 15.386 4.17-.004.008v-.002l15.443-4.229L81.075 65H48.792l-.277-3.043-.631-7.129L47.553 51h34.749l1.264-14H30.64l-.277-3.041-.63-7.131L29.401 23h69.281l-.331 3.862z'
           ></path>
         </svg>
 
-        <svg viewBox='0 0 128 128' width='50px' height='50px'>
+        <svg viewBox='0 0 128 128' width='30px' height='30px'>
           <path fill='#F0DB4F' d='M1.408 1.408h125.184v125.185H1.408z'
           ></path><path
             fill='#323330'
@@ -151,7 +162,6 @@ import "../../css/variables.module.css";
         </svg>
       </div>
       <div>
-        <img src='' alt='' />
         <h4 class='project__title'>Project-4</h4>
         <p class='project__description'>
           Lorem, ipsum dolor sit amet consectetur adipisicing.
@@ -163,7 +173,7 @@ import "../../css/variables.module.css";
       </div>
     </article>
   </div>
-  <button class='next'>Next</button>
+  <button class='next'>&rarr;</button>
 </div>
 
 <style>
@@ -174,9 +184,12 @@ import "../../css/variables.module.css";
     position: relative;
     overflow: hidden;
   }
+
+
   .carrousel {
+    position: relative;
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease;
     will-change: transform;
   }
 
@@ -227,20 +240,24 @@ import "../../css/variables.module.css";
   button.next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff; /* Color de fondo */
-    border: 1px solid #ccc; /* Bordes */
-    padding: 10px;
+    transform: translateY(150%);
+    background-color: var(--bg-prussian-blue);
+    color: var(--text-columbia-blue);
+    border: none;
+    padding: 20px;
     cursor: pointer;
-    z-index: 1000; /* Asegúrate de que los botones estén encima del carrusel */
+    z-index: 10000; /* Asegúrate de que los botones estén encima del carrusel */
+    border-radius: 50%;
   }
 
   button.prev {
-    left: 10px; /* Ajusta según sea necesario */
+    
+    left: 10px;
   }
 
   button.next {
-    right: 10px; /* Ajusta según sea necesario */
+   
+    right: 10px;
   }
 
   @media screen and (min-width: 575px) {
@@ -287,30 +304,34 @@ import "../../css/variables.module.css";
       ".project__container"
     ) as NodeListOf<HTMLElement>;
     const totalProjects = projects.length;
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev") as HTMLButtonElement;
+    const nextButton = document.querySelector(".next") as HTMLButtonElement;
 
     let currentIndex = 0;
 
     function showProject(index: number) {
-      const projectWidth = projects[0].offsetWidth + 20;
+      const projectWidth = projects[0].offsetWidth + 20; // Assumes 20px margin/padding between projects
       slider.style.transform = `translateX(-${index * projectWidth}px)`;
+      updateButtonState(index);
+    }
+
+    function updateButtonState(index: number) {
+      prevButton.style.display = index === 0 ? "none" : "block";
+      nextButton.style.display = index >= totalProjects - 2 ? "none" : "block";
     }
 
     function nextProject() {
-      currentIndex = (currentIndex + 1) % totalProjects;
-      if (currentIndex > totalProjects - 2) {
-        currentIndex = 0;
+      if (currentIndex < totalProjects - 2) {
+        currentIndex++;
+        showProject(currentIndex);
       }
-      showProject(currentIndex);
     }
 
     function prevProject() {
-      currentIndex = (currentIndex - 1 + totalProjects) % totalProjects;
-      if (currentIndex < 0) {
-        currentIndex = totalProjects - 2;
+      if (currentIndex > 0) {
+        currentIndex--;
+        showProject(currentIndex);
       }
-      showProject(currentIndex);
     }
 
     prevButton!.addEventListener("click", prevProject);
